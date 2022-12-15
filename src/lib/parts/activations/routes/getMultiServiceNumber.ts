@@ -4,6 +4,7 @@ import { Query } from '../../../query/query.module';
 import { Countries } from '../../utils/countries';
 import { IMultiNumber } from '../../../../ressources/responses';
 import { Services } from '../../utils/services';
+import { ref } from '../../utils/contants';
 
 export class getMultiServiceNumber {
   public query?: Query;
@@ -16,6 +17,7 @@ export class getMultiServiceNumber {
     if (typeof options.country == 'string')
       options.country = await this.countries?.toNumber(options.country);
     if (options.service) options.service = this.services?.get(options.service);
+    options.ref = options.ref ?? ref
     return new Promise<IMultiNumber[]>((resolve, reject) => {
       this.query
         ?.makeCall(EApiActions.getMultiServiceNumber, options)

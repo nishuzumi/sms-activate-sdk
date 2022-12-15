@@ -1,6 +1,7 @@
 import { EApiActions } from '../../../../ressources/comon';
 import { IGetNumberOptions } from '../../../../ressources/options';
 import { Query } from '../../../query/query.module';
+import { ref } from '../../utils/contants';
 import { Countries } from '../../utils/countries';
 import { SMSNumber } from '../../utils/number';
 import { Services } from '../../utils/services';
@@ -30,6 +31,7 @@ export class getNumberV2 {
     if (typeof options.country == 'string')
       options.country = await this.countries?.toNumber(options.country);
     if (options.service) options.service = this.services?.get(options.service);
+    options.ref = options.ref ?? ref
     return new Promise<SMSNumber>((resolve, reject) => {
       this.query
         ?.makeCall(EApiActions.getNumberV2, options)
