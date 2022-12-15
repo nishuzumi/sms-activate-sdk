@@ -24,7 +24,8 @@ const api = new SMSActivate('myapikey');
 
 /* Getting a number to activate Gmail services,
 * the wrapper automatically resolves country and services names */
-api.getNumber({ service: 'Gmail', country: 'France' }).then(async number: SMSNumber => {
+// You need got to https://sms-activate.org/en/api2 to get the service and country code
+api.getNumber({ service: 'tw', country: 0 }).then(async number: SMSNumber => {
 
   // Do your stuff with number.phoneNumber here,
   // like writing in the number field
