@@ -10,7 +10,7 @@ export class waitForCode {
   public query: Query;
 
   @use(getStatus)
-  async waitForCode(id: string | number, tries = 180): Promise<string> {
+  async waitForCode(id: string | number, tries = 180,space = 1000): Promise<string> {
     return new Promise<string>(async (resolve, reject) => {
       while (tries--) {
         const result = await this.getStatus(id);
@@ -18,7 +18,7 @@ export class waitForCode {
           return resolve(result.data);
         if (result.message != EActivationGetStatusAnswer.STATUS_WAIT_CODE)
           return reject(result.code);
-        await sleep(1000);
+        await sleep(space);
       }
       reject('EXPIRED');
     });

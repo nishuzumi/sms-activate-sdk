@@ -48,8 +48,8 @@ export class SMSNumber {
     };
   }
 
-  async getCode(tries = 180): Promise<string> {
-    return this.utils?.waitForCode(this.activationId, tries);
+  async getCode(tries = 180,space = 1000): Promise<string> {
+    return this.utils?.waitForCode(this.activationId, tries, space);
   }
 
   async ready() {
