@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LCozzoli/SMS-Activate.org-Typescript.git"
+    "url": "git+https://github.com/nishuzumi/sms-activate-sdk.git"
   },
   "keywords": [
     "smsactivate",
@@ -39,7 +39,7 @@
   "author": "SegFault",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LCozzoli/SMS-Activate.org-Typescript/issues"
+    "url": "https://github.com/nishuzumi/sms-activate-sdk/issues"
   },
-  "homepage": "https://github.com/LCozzoli/SMS-Activate.org-Typescript#readme"
+  "homepage": "https://github.com/nishuzumi/sms-activate-sdk#readme"
 }
