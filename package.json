@@ -1,6 +1,6 @@
 {
-  "name": "sms-activate-sdk",
-  "version": "2.0.3",
+  "name": "sms-activate",
+  "version": "2.0.4",
   "description": "A full NodeJS API for sms-activate.org",
   "main": "dist/index.js",
   "devDependencies": {

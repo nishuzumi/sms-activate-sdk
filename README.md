@@ -1,4 +1,4 @@
-# Sms Activate SDK
+# Sms Activate
 
 This package fully supports all the https://sms-activate.org/ API with Typescript types. Fork on sms-activate-org
 
@@ -6,14 +6,19 @@ This package fully supports all the https://sms-activate.org/ API with Typescrip
 
 Install the package using npm
 
+Recommanded:
 ```bash
+  npm install sms-activate
+```
+Or
+```base
   npm install sms-activate-sdk
 ```
 
 ## Usage/Examples
 
 ```javascript
-import { SMSActivate, SMSNumber } from 'sms-activate-sdk';
+import { SMSActivate, SMSNumber } from 'sms-activate';
 
 const api = new SMSActivate('myapikey');
 
