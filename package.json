@@ -26,7 +26,8 @@
     "dev": "tsc-watch --onSuccess \"ts-node src/index.ts\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "tsc && node dist/test.js"
+    "test": "tsc && node dist/test.js",
+    "change-name":"node change-name.js"
   },
   "repository": {
     "type": "git",
